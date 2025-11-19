@@ -1,0 +1,32 @@
+/**
+ * mobile-buttons.css
+ * Reglas CSS específicas para centrar botones en vista móvil (<= 640px).
+ * - Limitado a elementos dentro de <main> para evitar cambiar header/nav u otras áreas.
+ * - Centra botones y enlaces que actúan como botones (inline-flex, botones reales).
+ * - Uso de !important sólo donde es necesario para sobreescribir utilidades de Tailwind en pequeños dispositivos.
+ */
+
+/* Solo en pantallas móviles (Tailwind's sm breakpoint ≈ 640px) */
+@media (max-width: 640px) {
+  /* Centrar botones y enlaces que usan la clase inline-flex (común en CTAs) dentro del main */
+  main .inline-flex,
+  main button,
+  main a.inline-flex,
+  main a[class*="px-"][class*="py-"] {
+    display: flex !important;
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center !important;
+  }
+
+  /* Asegurar que botones con asChild (enlaces) también se centren */
+  main a[role="button"],
+  main [role="button"] {
+    display: flex !important;
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center !important;
+  }
+}
