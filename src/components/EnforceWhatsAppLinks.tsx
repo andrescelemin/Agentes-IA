@@ -15,7 +15,7 @@
  *   - elementos marcados con data-whatsapp-preserve="true"
  *
  * Comportamiento:
- * - Al montarse recorre todos los &lt;a[href]&gt; y, si detecta patrones asociados a WhatsApp,
+ * - Al montarse recorre todos los <a[href]> y, si detecta patrones asociados a WhatsApp,
  *   los reescribe al WHATSAPP_LINK, preservando mensajes predefinidos (text/body) y otros
  *   parámetros de la URL. Solo cambia el número.
  * - Observa mutaciones del DOM para capturar enlaces generados dinámicamente.
